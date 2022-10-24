@@ -1,0 +1,30 @@
+.filtros {    
+    width: 18%;
+    height: 100%;
+    margin-top: -1px;
+    border-right: 1px solid;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 90%;
+    height: 100%;
+}
+
+.container legend {
+    margin-left: 5px;
+}
+
+.container fieldset {
+    padding: 5px;
+}
+
+
+
+.filtro{
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+    border: 1px solid;
+}

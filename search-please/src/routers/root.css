@@ -1,0 +1,234 @@
+#container {
+    width: 100%;
+    height: 100%;
+        
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#header {
+    width: 70%;
+    height: 15%;
+    border: 1px solid;
+    display: flex;
+}
+
+#detalhe {
+    width: 70%;
+    height: 85%;
+    border: 1px solid;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.detal {
+    width: 85%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {    
+    width: 15%;
+    height: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    text-decoration: none;
+    color: black;
+}
+.container-header {
+    width: 85%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.area1 {    
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.area2 {    
+    width: 100%;
+    height: 50%;
+}
+
+.campo {
+    width: 60%;
+    margin-left: 2%;
+    font-size: 1em;
+    height: 30px;
+    border-radius: 5px 0 0 5px;
+}
+
+.pesquisa {
+    width: 4%;
+    border-radius: 5px;    
+    height: 34px;
+    width: 40px;
+    font-size: 1em;
+    border-radius: 0 5px 5px 0;
+    margin-left: -2px;
+    background-color: rgb(126, 150, 255);
+}
+
+.perfilUsuario{
+    width: 34%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+
+.perfilUsuario p {
+    margin-right: 20px;
+}
+
+.perfil {
+    border: 1px solid;
+    width: 15%;
+    height: 80%;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.menu {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lista {
+    display: flex;
+}
+
+.item-lista {
+    
+    list-style: none;
+    margin: 0 50px;
+}
+
+.item-lista p{
+    color: black;
+    font-size: 1.4em;
+    cursor:default;
+}
+
+.url{
+    text-decoration: none;
+    color: black;
+    font-size: 1.4em;
+}
+
+.linha {
+    position: absolute;    
+    margin: 8px 0 0 -20px;
+    border: 1px solid;
+    width: 12px;
+    background-color: black;
+}
+
+.linha::after {
+    content: '';
+    margin: 3px 0 0 -1px;
+    position: absolute;
+    border: 1px solid;
+    width: 12px;
+    background-color: black;
+}
+.linha::before {
+    content: '';
+    margin: 7px 0 0 -1px;
+    position: absolute;
+    border: 1px solid;
+    width: 12px;
+    background-color: black;
+}
+
+.conteudo {
+    position: absolute;
+    overflow: hidden;
+    height: 0;
+    width: 100px;
+    transition: 1.3s;
+    border-radius: 5px;
+    background-color: antiquewhite;
+}
+
+.item-lista:hover .conteudo{
+    transition: 1.3s;
+    border: 1px solid;
+    height: auto;
+    width: auto;
+
+}
+
+.submenu ul{
+    list-style: none;
+    
+}
+.submenu ul li{
+    border: 1px solid;
+    margin: 4px;
+    transition: 0.2s;
+    border-radius: 3px;
+}
+
+
+.submenu ul li:hover{
+    border: 1px solid;
+    margin: 2px;
+}
+.submenu ul li a{
+    text-decoration: none;
+    color: black;
+    margin: 5px;
+}
+
+@media only screen and (min-width: 1200px) {
+    
+    .logo {    
+        font-size: 2.3em;
+    }
+
+}
+
+@media only screen and (min-width: 1500px) {
+    
+    .logo {    
+        font-size: 2.755em;
+    }
+
+}
+
+
+@media only screen and (min-width: 1700px) {
+    
+    .logo {    
+        font-size: 3.123em;
+    }
+
+}
+
+
+
+@media only screen and (min-width: 1900px) {
+    
+    .logo {    
+        font-size: 3.45em;
+    }
+
+}
+
+
