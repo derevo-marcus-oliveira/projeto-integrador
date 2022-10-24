@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 
 import './index.css'
+import Index from './routers';
 import Root from './routers/root';
 import Catalogo from './routers/routes/catalogo';
 import Produto from './routers/routes/componentsRouters/produto';
@@ -12,8 +13,9 @@ import Servico from './routers/routes/servico';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root/>,    
+    element: <Root/>,   
     children: [
+      { index: true, element: <Index /> },
       {
         path: "catalogo",
         element: <Catalogo/>,

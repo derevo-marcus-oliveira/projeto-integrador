@@ -1,7 +1,8 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useLocation } from "react-router-dom";
 import './root.css';
 
 export default function Root() {
+    const location = useLocation();
     return (
       <>
         <div id="container">
@@ -18,7 +19,7 @@ export default function Root() {
                         <input type="text" className="campo" />
                         <button type="submit" className="pesquisa">
                            <Link to={""}>
-                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <i className="fa-solid fa-magnifying-glass"></i>
                            </Link>
                         </button>
 
@@ -84,7 +85,6 @@ export default function Root() {
             </div>
     
             <div id="detalhe">
-                
                 <Outlet/>
             </div>
         </div>

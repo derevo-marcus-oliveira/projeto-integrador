@@ -1,4 +1,5 @@
 import { useLocation  } from "react-router-dom";
+import './produto.css'
 
 export default function Produto () {
     const location = useLocation();
@@ -29,17 +30,21 @@ export default function Produto () {
             <div>
                 {location.pathname.search('processador') > 0 ? (
                     
-                    <div>
+                    <div className="produtos">
                         
                         {produtos.map((produto) => (
-                            <>                                    
+                            <>    
+                                <div className="boxProduto" key={produto.id}>
+
                                 <ul>
-                                    <li>
+                                    <li >
                                         <div>
                                             {produto.nome} : {produto.preco}                                
                                         </div>
                                     </li>
                                 </ul>  
+                                </div>
+
                             </>       
                         ))}
 
