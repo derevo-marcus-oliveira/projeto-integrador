@@ -1,6 +1,19 @@
-import { Outlet, Link, useNavigation, useLocation  } from "react-router-dom";
+import { Outlet, Link, useNavigation, useLocation, Form  } from "react-router-dom";
 import "./filtro.css"
 
+export async function GetInfo({request}, name){
+    const url = new URL(request.url);
+    const q = url.searchParams.get(name);
+    const contacts = await getContacts(q);
+    return { contacts };
+}
+
+export async function loader({ request }) {
+    const url = new URL(request.url);
+    const q = url.searchParams.get("q");
+    const contacts = await getContacts(q);
+    return { contacts };
+  }
 
 export default function Catalogo () {
     const navigation = useNavigation();
@@ -69,19 +82,22 @@ export default function Catalogo () {
                     </div>
                 ) : (
                     <div className="container">
-                        <fieldset>
-                            <legend> RAM </legend>
+                            <fieldset>
+                                <legend> RAM </legend>
 
-                            <div>
-                                <input type="checkbox" id="clock" name="clock" />
-                                <label for="clock">DDR4</label>
-                            </div>
+                                <Form id="search-form" role="search">
+                                    <div>
+                                        <input type="checkbox" id="AMD" name="AMD"/>
+                                        <label for="AMD">AMD</label>
+                                    </div>
 
-                            <div>
-                                <input type="checkbox" id="horns" name="horns"/>
-                                <label for="horns">DDR3</label>
-                            </div>
-                        </fieldset>
+                                    <div>
+                                        <input type="checkbox" id="Intel" name="Intel"/>
+                                        <label for="Intel">Intel</label>
+                                    </div>
+                                </Form>
+                            </fieldset> 
+                        
                     </div>
                 )}
                 

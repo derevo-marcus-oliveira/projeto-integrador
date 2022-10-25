@@ -1,4 +1,4 @@
-import { useLocation  } from "react-router-dom";
+import { useHref, useLocation  } from "react-router-dom";
 import './produto.css'
 
 export default function Produto () {
@@ -7,27 +7,29 @@ export default function Produto () {
     let produtos = [
         {
             "id" : 1,
-            "foto" : "",
+            "foto" : "https://www.zoing.com.br/media/catalog/product/cache/c33b112402d4ee025d9049949ed1bbd2/b/x/bx80684i79700.jpg",
             "nome" : "Intel",
-            "preco" : "120.00",
+            "tipo" : "Intel",
+            "geracao" : ""
         },
         {
             "id" : 2,
-            "foto" : "",
+            "foto" : "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/1/0/100-100000031oem1.jpg",
             "nome" : "AMD",
-            "preco" : "100.00",
+            "tipo" : "AMD",
+            "geracao" : ""
         },
-        {
-            "id" : 3,
-            "foto" : "",
-            "nome" : "GibaByte",
-            "preco" : "80.00",
-        }
     ]
+
+    let buscaInformacao = (parametro) => {
+
+        return produtos.find(p => p.tipo == parametro);
+
+    } 
 
     return (
         <>
-            <div>
+            <div id="container-produtos">
                 {location.pathname.search('processador') > 0 ? (
                     
                     <div className="produtos">
@@ -35,14 +37,16 @@ export default function Produto () {
                         {produtos.map((produto) => (
                             <>    
                                 <div className="boxProduto" key={produto.id}>
-
-                                <ul>
-                                    <li >
-                                        <div>
-                                            {produto.nome} : {produto.preco}                                
+                                    
+                                    <div className="item-produto">
+                                        <img src={produto.foto} alt="" srcset="" />
+                                    
+                                        <div className="informacao">
+                                            <h2>{produto.nome}</h2>                                 
                                         </div>
-                                    </li>
-                                </ul>  
+                                    
+                                    </div>
+                                    
                                 </div>
 
                             </>       
